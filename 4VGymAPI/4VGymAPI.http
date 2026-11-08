@@ -1,0 +1,6 @@
+@_4VGymAPI_HostAddress = http://localhost:5117
+
+GET {{_4VGymAPI_HostAddress}}/4vgymapi/
+Accept: application/json
+
+###

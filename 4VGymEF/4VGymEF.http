@@ -1,0 +1,131 @@
+@_4VGymEF_HostAddress = http://localhost:5117
+
+GET {{_4VGymEF_HostAddress}}/activity-types
+Accept: application/json
+
+###
+
+GET {{_4VGymEF_HostAddress}}/instructors/2
+Accept: application/json
+
+###
+
+GET {{_4VGymEF_HostAddress}}/instructors?first_initial=
+Accept: application/json
+
+###
+
+POST {{_4VGymEF_HostAddress}}/activity-types
+Content-Type: application/json
+
+{
+  "name": "Zumba",
+  "number-monitors": 3
+}
+
+### Para hacer un POST de Actividades JSOn Vacio
+POST {{_4VGymEF_HostAddress}}/activity-types
+Content-Type: application/json
+
+{
+}
+
+### Para hacer un POST de Actividades sin nombre
+POST {{_4VGymEF_HostAddress}}/activity-types
+Content-Type: application/json
+
+{
+  "number-monitors": 3
+}
+
+### Para hacer un POST de Actividades con nombre vacio
+POST {{_4VGymEF_HostAddress}}/activity-types
+Content-Type: application/json
+
+{
+  "name": "",
+  "number-monitors": 3
+}
+
+### Para hacer un POST de Actividades sin numero de monitores
+POST {{_4VGymEF_HostAddress}}/activity-types
+Content-Type: application/json
+
+{
+  "name": "Actividad1"
+}
+
+### Para hacer un POST de Instructors happy path
+POST {{_4VGymEF_HostAddress}}/instructors
+Content-Type: application/json
+
+{
+  "name": "David Noyaa",
+  "phone": "666554433",
+  "email": "david_noya2@gmail.com",
+  "photo_url": "http://www.davidnoya.com/david_noya.jpg"
+}
+
+### Para hacer un POST de Instructors Telefono incorrecto
+POST {{_4VGymEF_HostAddress}}/instructors
+Content-Type: application/json
+
+{
+  "name": "David Noya",
+  "phone": "adsadsa",
+  "email": "david_noya@cuatrovientos.org",
+  "photo_url": "http://www.davidnoya.com/david_noya.jpg"
+}
+
+
+### Para hacer un POST de Instructors Email Incorrecto
+POST {{_4VGymEF_HostAddress}}/instructors
+Content-Type: application/json
+
+{
+  "name": "David Noya",
+  "phone": "666554433",
+  "email": "david_noya@cuatrovientos.org",
+  "photo_url": "http://www.davidnoya.com/david_noya.jpg"
+}
+
+### Para hacer un POST de Instructors Telefono obligatorio
+POST {{_4VGymEF_HostAddress}}/instructors
+Content-Type: application/json
+
+{
+  "name": "David Noya",
+  "email": "david_noya@cuatrovientos.org",
+  "photo_url": "http://www.davidnoya.com/david_noya.jpg"
+}
+
+### Para hacer un POST de Instructors nulo
+POST {{_4VGymEF_HostAddress}}/instructors
+Content-Type: application/json
+
+{
+}
+
+### Para hacer un POST de Actividades
+POST {{_4VGymEF_HostAddress}}/activities
+Content-Type: application/json
+
+{
+  "activity_type_id": 1,
+  "instructors_id": [1,2],
+  "max_particpants": 20,
+  "date_start": "2026-10-22T11:05:48.852Z",
+  "date_end": "2026-10-22T12:05:48.852Z"
+}
+
+### Para hacer un POST de Actividades con fecha de inicio incorrecta
+POST {{_4VGymEF_HostAddress}}/activities
+Content-Type: application/json
+
+{
+  "activity_type_id": 1,
+  "instructors_id": [1,2],
+  "max_particpants": 20,
+  "date_start": "2025-10-21T11:05:48.852Z",
+  "date_end": "2024-10-21T12:05:48.852Z"
+}

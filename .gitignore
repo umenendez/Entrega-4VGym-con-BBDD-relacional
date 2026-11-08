@@ -1,0 +1,54 @@
+## =======================================================================
+## Visual Studio & ASP.NET Core .gitignore
+## =======================================================================
+
+# -----------------------------------------------------------------------
+# Carpetas de Compilación y Salida (Binarios)
+# -----------------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+build/
+dist/
+
+# -----------------------------------------------------------------------
+# Archivos y Carpetas de Configuración de Visual Studio
+# -----------------------------------------------------------------------
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# -----------------------------------------------------------------------
+# Paquetes NuGet
+# -----------------------------------------------------------------------
+*.nupkg
+*.snupkg
+# Descomentar si se usa carpeta local de paquetes en la solución:
+# **/packages/*
+# !**/packages/build/
+
+# -----------------------------------------------------------------------
+# Configuración Local del Entorno (Secretos y Ajustes Locales)
+# -----------------------------------------------------------------------
+appsettings.Development.json
+appsettings.Local.json
+*.local.json
+
+# -----------------------------------------------------------------------
+# Herramientas de Desarrollo y Cobertura de Código
+# -----------------------------------------------------------------------
+*.NETCore,Version=*.AssemblyAttributes.cs
+TestResults/
+*.coverage
+*.coveragexml
+
+# -----------------------------------------------------------------------
+# Archivos Temporales del Sistema Operativo e IDEs
+# -----------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
